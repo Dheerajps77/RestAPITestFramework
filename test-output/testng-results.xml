@@ -2,20 +2,20 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="1329" started-at="2019-04-17T06:06:19Z" finished-at="2019-04-17T06:06:21Z">
+  <suite name="Default suite" duration-ms="825" started-at="2019-04-17T11:47:15Z" finished-at="2019-04-17T11:47:16Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="1329" started-at="2019-04-17T06:06:19Z" finished-at="2019-04-17T06:06:21Z">
-      <class name="com.qa.restapi.TestClass.POSTAPITest">
-        <test-method status="PASS" signature="SetUp()[pri:0, instance:com.qa.restapi.TestClass.POSTAPITest@d2cc05a]" name="SetUp" is-config="true" duration-ms="5" started-at="2019-04-17T06:06:19Z" finished-at="2019-04-17T06:06:19Z">
+    <test name="Default test" duration-ms="825" started-at="2019-04-17T11:47:15Z" finished-at="2019-04-17T11:47:16Z">
+      <class name="com.qa.restapi.TestClass.ErgastApiTest">
+        <test-method status="PASS" signature="setUpMethod()[pri:0, instance:com.qa.restapi.TestClass.ErgastApiTest@482f8f11]" name="setUpMethod" is-config="true" duration-ms="0" started-at="2019-04-17T11:47:15Z" finished-at="2019-04-17T11:47:15Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- SetUp -->
-        <test-method status="PASS" signature="PostAPITest()[pri:0, instance:com.qa.restapi.TestClass.POSTAPITest@d2cc05a]" name="PostAPITest" duration-ms="1303" started-at="2019-04-17T06:06:19Z" finished-at="2019-04-17T06:06:21Z">
+        </test-method> <!-- setUpMethod -->
+        <test-method status="PASS" signature="GetApiMethod()[pri:0, instance:com.qa.restapi.TestClass.ErgastApiTest@482f8f11]" name="GetApiMethod" duration-ms="809" started-at="2019-04-17T11:47:15Z" finished-at="2019-04-17T11:47:16Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- PostAPITest -->
-      </class> <!-- com.qa.restapi.TestClass.POSTAPITest -->
+        </test-method> <!-- GetApiMethod -->
+      </class> <!-- com.qa.restapi.TestClass.ErgastApiTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

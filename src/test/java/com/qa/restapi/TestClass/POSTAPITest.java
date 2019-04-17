@@ -57,12 +57,15 @@ public class POSTAPITest extends TestBase{
 			
 			// JavaOject convert to JSON(Marshaling)
 			objMapper.writeValue(file, userData);
-			// Obj convert to JSON in String
+			// JSONObject convert to JSON in String
 			String users=objMapper.writeValueAsString(userData);
 			
 			System.out.println(users);
 			
+			// Call the API
 			objCloseableHttpResponse=objRestClient.PostAPIMethod(completeUrl, users, hasMap);
+			
+			// Validating Created response code
 			int getStatusCode=objCloseableHttpResponse.getStatusLine().getStatusCode();			
 			Assert.assertEquals(HTTP_RESPONSE_CODE_201, getStatusCode);
 			System.out.println("Created entity response code is : "+getStatusCode);
@@ -71,14 +74,13 @@ public class POSTAPITest extends TestBase{
 			JSONObject jsonObj=new JSONObject(responseString);		
      		System.out.println(jsonObj);
 			
-			
 			// JSON to JavaObject(Un-Marshaling)		
 			UserData userData1=objMapper.readValue(responseString, UserData.class); //Actual users Object
 			System.out.println(userData1);
 			
 			Assert.assertEquals(userData.getUserFirstName(), (userData1.getUserFirstName()));
 			Assert.assertEquals(userData.getUserSecondName(),(userData1.getUserSecondName()));									
-			System.out.println();
+			System.out.println("Id : " + userData1.getId()+" and created date is : "+ userData1.getCreatedAt());
 			
 		}
 		catch (Exception e) {
