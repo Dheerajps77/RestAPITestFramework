@@ -17,6 +17,8 @@ public class TestBase {
 	public int HTTP_RESPONSE_CODE_201=201;
 	public int HTTP_RESPONSE_CODE_202=202;
 	public int HTTP_RESPONSE_CODE_203=203;
+	public String LAST_NAME="Bluth";
+	public String totalpages="4";
 	
 	public TestBase()
 	{

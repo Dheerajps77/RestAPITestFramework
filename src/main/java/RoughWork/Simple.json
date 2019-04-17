@@ -1,0 +1,35 @@
+{
+	"First name": "Sohit",
+	"Second name": "Rajput",
+	"Phone postal code":91,	
+	"Customer Family": {
+		"Father name": "Rajender Rajput",
+		"Mother name": "Soumya Devi",
+		"Sisters": 3,
+		"Brothers": 1
+	},
+	"address": {
+		"street address": "Devoli",
+		"City": "New Delhi",
+		"PinCode": 110062,
+		"State": "Delhi"
+	},
+	"Phone number": [
+		{
+			"type": "home",
+			"number": "3454342323312"
+		},
+		{
+			"type": "Office",
+			"number": "765776655654"
+		}
+	],	
+	"Hobbies": [
+		{
+			"First hobby": "Playing Cricket",
+			"Second hobby": "Playing game",
+			"Third hobby": "Reading books"
+		}
+	]
+	
+}

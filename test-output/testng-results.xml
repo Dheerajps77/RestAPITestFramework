@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="1" total="2" passed="1">
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="4266" started-at="2019-04-12T11:57:47Z" finished-at="2019-04-12T11:57:51Z">
+  <suite name="Default suite" duration-ms="1329" started-at="2019-04-17T06:06:19Z" finished-at="2019-04-17T06:06:21Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="4266" started-at="2019-04-12T11:57:47Z" finished-at="2019-04-12T11:57:51Z">
-      <class name="com.qa.restapi.TestClass.GetAPITest">
-        <test-method status="PASS" signature="SetUp()[pri:0, instance:com.qa.restapi.TestClass.GetAPITest@ef9296d]" name="SetUp" is-config="true" duration-ms="5" started-at="2019-04-12T11:57:47Z" finished-at="2019-04-12T11:57:47Z">
+    <test name="Default test" duration-ms="1329" started-at="2019-04-17T06:06:19Z" finished-at="2019-04-17T06:06:21Z">
+      <class name="com.qa.restapi.TestClass.POSTAPITest">
+        <test-method status="PASS" signature="SetUp()[pri:0, instance:com.qa.restapi.TestClass.POSTAPITest@d2cc05a]" name="SetUp" is-config="true" duration-ms="5" started-at="2019-04-17T06:06:19Z" finished-at="2019-04-17T06:06:19Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- SetUp -->
-        <test-method status="PASS" signature="ValidateJSONValues()[pri:2, instance:com.qa.restapi.TestClass.GetAPITest@ef9296d]" name="ValidateJSONValues" duration-ms="4237" started-at="2019-04-12T11:57:47Z" finished-at="2019-04-12T11:57:51Z">
+        <test-method status="PASS" signature="PostAPITest()[pri:0, instance:com.qa.restapi.TestClass.POSTAPITest@d2cc05a]" name="PostAPITest" duration-ms="1303" started-at="2019-04-17T06:06:19Z" finished-at="2019-04-17T06:06:21Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- ValidateJSONValues -->
-      </class> <!-- com.qa.restapi.TestClass.GetAPITest -->
+        </test-method> <!-- PostAPITest -->
+      </class> <!-- com.qa.restapi.TestClass.POSTAPITest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

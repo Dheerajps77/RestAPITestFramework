@@ -1,10 +1,13 @@
 package com.qa.restapi.client;
 
 import java.util.HashMap;
+import java.util.Map;
 
 import org.apache.http.Header;
 import org.apache.http.client.methods.CloseableHttpResponse;
 import org.apache.http.client.methods.HttpGet;
+import org.apache.http.client.methods.HttpPost;
+import org.apache.http.entity.StringEntity;
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClients;
 import org.apache.http.util.EntityUtils;
@@ -116,8 +119,8 @@ public class RestClient {
 		}
 	}
 	
-	
-	public CloseableHttpResponse ValidationJSONResponse(String url)
+	// This will return the executed GET method in CloseableHTTPResponse abstract class object
+	public CloseableHttpResponse ValidateSONResponseCode(String url)
 	{		
 		CloseableHttpResponse objCloseableHttpResponse = null;
 		try
@@ -132,15 +135,49 @@ public class RestClient {
 		return objCloseableHttpResponse;
 	}
 	
-	public void GetMethod(String url, HashMap<String, String> haspMap)
+	// This method will return the JSON string Entity(which holds all "file.json" values in entity)
+	public String GetMethodJSONValues(String url)
 	{
+		String jsonStringValue="";
 		try
 		{
-			
+			CloseableHttpClient objCloseableHttpClient=HttpClients.createDefault();
+			HttpGet objHttpGet=new HttpGet(url);
+			CloseableHttpResponse objCloseableHttpResponse=objCloseableHttpClient.execute(objHttpGet);
+			jsonStringValue=EntityUtils.toString(objCloseableHttpResponse.getEntity(), "UTF-8");
 		}
 		catch (Exception e) {
 			e.printStackTrace();
 		}
+		return jsonStringValue;
+	}
+	
+	// This method will return the response of your payLoad in closeableHttpResponse
+	public CloseableHttpResponse PostAPIMethod(String url, String getStringEntity, HashMap<String, String> header)
+	{
+		CloseableHttpResponse objCloseableHttpResponse=null;	
+		try
+		{
+			CloseableHttpClient objCloseableHttpClient=HttpClients.createDefault();
+			
+			// HTTP post request
+			HttpPost objPost=new HttpPost(url);
+			
+			// defining payLoad(Like we did in this example i.e, created "userFirstName" and "userSecondName")
+			StringEntity objStringEntity=new StringEntity(getStringEntity); 
+			objPost.setEntity(objStringEntity);
+			
+			// String and returning header key/value pairs
+			for(Map.Entry<String, String> entry:header.entrySet())
+			{
+				objPost.addHeader(entry.getKey(), entry.getValue());
+			}
+			objCloseableHttpResponse=objCloseableHttpClient.execute(objPost);
+			
+		}catch (Exception e) {
+			e.printStackTrace();
+		}
+		return objCloseableHttpResponse;
 	}
 
 }
