@@ -5,15 +5,22 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
 
+import javax.swing.plaf.basic.BasicInternalFrameTitlePane.RestoreAction;
+
 import org.apache.http.Header;
+import org.apache.http.HttpEntity;
 import org.apache.http.client.methods.CloseableHttpResponse;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.client.methods.HttpPost;
+import org.apache.http.client.methods.HttpPut;
 import org.apache.http.entity.StringEntity;
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClients;
 import org.apache.http.util.EntityUtils;
 import org.json.JSONObject;
+
+import junit.framework.Assert;
+
 
 public class RestClient {
 
@@ -167,20 +174,30 @@ public class RestClient {
 		}
 		return objCloseableHttpResponse;
 	}
-
-	/*
-	 * public String SeeAllJSONObjectsInJSONFile(String jsonString) { String str =
-	 * null;
-	 * 
-	 * try {
-	 * 
-	 * JSONObject jsonObj = new JSONObject(jsonString); Iterator<String> iterator =
-	 * jsonObj.keys(); while (iterator.hasNext()) { str = iterator.next();
-	 * System.out.println(str);
-	 * 
-	 * }
-	 * 
-	 * } catch (Exception e) { e.printStackTrace(); } return str; }
-	 */
-
+	
+	
+	public int PUTAPITestMethod(String URL, String getStringEntity)
+	{
+		CloseableHttpClient objCloseableHttpClient;
+		String jsonStringValue="";
+		int statusOfCode=0;
+		try
+		{
+			objCloseableHttpClient=HttpClients.createDefault();
+			HttpPut objPut=new HttpPut(URL);
+			StringEntity objStringEntity = new StringEntity(getStringEntity);			
+			objPut.setEntity(objStringEntity);					
+			CloseableHttpResponse obCloseableHttpResponse=objCloseableHttpClient.execute(objPut);
+			jsonStringValue = EntityUtils.toString(obCloseableHttpResponse.getEntity(), "UTF-8");
+			statusOfCode=obCloseableHttpResponse.getStatusLine().getStatusCode();						
+			System.out.println(statusOfCode);
+			System.out.println(jsonStringValue);
+			
+		}
+		catch (Exception e) {
+		e.printStackTrace();
+		}
+		
+		return statusOfCode;
+	}
 }

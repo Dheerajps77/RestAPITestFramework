@@ -7,10 +7,7 @@ public class UserData {
 	String id;
 	String createdAt;
 	
-	public UserData()
-	{
-		
-	}
+	public UserData() {}
 	
 	public UserData(String userFirstName, String userSecondName)
 	{
@@ -49,8 +46,5 @@ public class UserData {
 	public void setCreatedAt(String createdAt) {
 		this.createdAt = createdAt;
 	}
-
-	
-	
 
 }

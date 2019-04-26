@@ -2,20 +2,16 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="825" started-at="2019-04-17T11:47:15Z" finished-at="2019-04-17T11:47:16Z">
+  <suite name="Default suite" duration-ms="1641" started-at="2019-04-26T11:08:50Z" finished-at="2019-04-26T11:08:52Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="825" started-at="2019-04-17T11:47:15Z" finished-at="2019-04-17T11:47:16Z">
-      <class name="com.qa.restapi.TestClass.ErgastApiTest">
-        <test-method status="PASS" signature="setUpMethod()[pri:0, instance:com.qa.restapi.TestClass.ErgastApiTest@482f8f11]" name="setUpMethod" is-config="true" duration-ms="0" started-at="2019-04-17T11:47:15Z" finished-at="2019-04-17T11:47:15Z">
+    <test name="Default test" duration-ms="1641" started-at="2019-04-26T11:08:50Z" finished-at="2019-04-26T11:08:52Z">
+      <class name="com.qa.restapi.TestClass.PUTTest">
+        <test-method status="PASS" signature="PUTAPITest()[pri:0, instance:com.qa.restapi.TestClass.PUTTest@c038203]" name="PUTAPITest" duration-ms="1618" started-at="2019-04-26T11:08:50Z" finished-at="2019-04-26T11:08:52Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setUpMethod -->
-        <test-method status="PASS" signature="GetApiMethod()[pri:0, instance:com.qa.restapi.TestClass.ErgastApiTest@482f8f11]" name="GetApiMethod" duration-ms="809" started-at="2019-04-17T11:47:15Z" finished-at="2019-04-17T11:47:16Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- GetApiMethod -->
-      </class> <!-- com.qa.restapi.TestClass.ErgastApiTest -->
+        </test-method> <!-- PUTAPITest -->
+      </class> <!-- com.qa.restapi.TestClass.PUTTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
