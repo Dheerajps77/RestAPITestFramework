@@ -15,7 +15,7 @@ import com.qa.restapi.base.TestBase;
 import com.qa.restapi.client.RestClient;
 
 
-public class GetAPITest extends TestBase {
+public class GETTest extends TestBase {
 
 	TestBase objTestBase;
 	RestClient objRestClient;

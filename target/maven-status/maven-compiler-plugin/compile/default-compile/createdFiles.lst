@@ -1,4 +1,7 @@
 com\qa\restapi\utils\JSONread.class
+RoughWork\ReadJSONFile.class
+com\qa\restapi\data\PUTAPIUser.class
 com\qa\restapi\client\RestClient.class
 com\qa\restapi\base\TestBase.class
-RoughWork\ReadJSONFile.class
+RoughWork\ReadJsonTest2.class
+com\qa\restapi\data\UserData.class

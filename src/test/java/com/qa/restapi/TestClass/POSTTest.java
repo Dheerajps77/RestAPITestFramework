@@ -17,7 +17,7 @@ import com.qa.restapi.data.UserData;
 
 import junit.framework.Assert;
 
-public class POSTAPITest extends TestBase{
+public class POSTTest extends TestBase{
 
 	TestBase objTestBase;
 	RestClient objRestClient;

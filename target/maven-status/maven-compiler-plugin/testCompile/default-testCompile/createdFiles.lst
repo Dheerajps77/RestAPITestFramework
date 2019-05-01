@@ -1,1 +1,5 @@
-com\qa\restapi\TestClass\GetAPITest.class
+com\qa\restapi\TestClass\ErgastApiTest.class
+com\qa\restapi\TestClass\POSTTest.class
+com\qa\restapi\TestClass\DELETTest.class
+com\qa\restapi\TestClass\GETTest.class
+com\qa\restapi\TestClass\PUTTest.class

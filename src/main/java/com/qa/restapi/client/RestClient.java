@@ -10,6 +10,7 @@ import javax.swing.plaf.basic.BasicInternalFrameTitlePane.RestoreAction;
 import org.apache.http.Header;
 import org.apache.http.HttpEntity;
 import org.apache.http.client.methods.CloseableHttpResponse;
+import org.apache.http.client.methods.HttpDelete;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.client.methods.HttpPost;
 import org.apache.http.client.methods.HttpPut;
@@ -175,7 +176,7 @@ public class RestClient {
 		return objCloseableHttpResponse;
 	}
 	
-	
+	// The PUT method will modify the existing resource
 	public int PUTAPITestMethod(String URL, String getStringEntity)
 	{
 		CloseableHttpClient objCloseableHttpClient;
@@ -183,10 +184,19 @@ public class RestClient {
 		int statusOfCode=0;
 		try
 		{
+			// Creating connection and storing in CloseableHttpClient(Abstract class) object
 			objCloseableHttpClient=HttpClients.createDefault();
+			
+			// Creating HTTP put method object and sending URL as parameter
 			HttpPut objPut=new HttpPut(URL);
-			StringEntity objStringEntity = new StringEntity(getStringEntity);			
-			objPut.setEntity(objStringEntity);					
+			
+			// Creates a StringEntity with the specified content by sending string values 
+			StringEntity objStringEntity = new StringEntity(getStringEntity);
+			
+			// Associating the objStringEntity with this request.
+			objPut.setEntity(objStringEntity);	
+			
+			// Executes HTTP PUT request 
 			CloseableHttpResponse obCloseableHttpResponse=objCloseableHttpClient.execute(objPut);
 			jsonStringValue = EntityUtils.toString(obCloseableHttpResponse.getEntity(), "UTF-8");
 			statusOfCode=obCloseableHttpResponse.getStatusLine().getStatusCode();						
@@ -200,4 +210,27 @@ public class RestClient {
 		
 		return statusOfCode;
 	}
+	
+	// This DELETE method will delete the existing resource 
+	public int DELETEAPITestMethod(String URL)
+	{
+		int respondeCode=0;
+		try
+		{
+			CloseableHttpClient objCloseableHttpClient=HttpClients.createDefault();
+			HttpDelete objHttpDelete=new HttpDelete(URL);
+			CloseableHttpResponse  objCloseableHttpResponse =objCloseableHttpClient.execute(objHttpDelete);
+			respondeCode=objCloseableHttpResponse.getStatusLine().getStatusCode();
+			
+		}
+		catch (Exception e) {
+			e.printStackTrace();
+			System.out.println(e.getMessage());
+			
+		}
+		
+		return respondeCode;
+	}
+	
+	
 }
