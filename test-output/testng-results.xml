@@ -2,16 +2,16 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="20239" started-at="2019-05-01T09:38:14Z" finished-at="2019-05-01T09:38:34Z">
+  <suite name="Default suite" duration-ms="51002" started-at="2019-05-02T10:52:10Z" finished-at="2019-05-02T10:53:01Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="20239" started-at="2019-05-01T09:38:14Z" finished-at="2019-05-01T09:38:34Z">
-      <class name="com.qa.restAssured.GETRestTest">
-        <test-method status="PASS" signature="GetData()[pri:0, instance:com.qa.restAssured.GETRestTest@6fe7aac8]" name="GetData" duration-ms="20220" started-at="2019-05-01T09:38:14Z" finished-at="2019-05-01T09:38:34Z">
+    <test name="Default test" duration-ms="51002" started-at="2019-05-02T10:52:10Z" finished-at="2019-05-02T10:53:01Z">
+      <class name="com.qa.restAssured.POSTRestTest">
+        <test-method status="PASS" signature="POSTRestApiTest()[pri:0, instance:com.qa.restAssured.POSTRestTest@3d680b5a]" name="POSTRestApiTest" duration-ms="50972" started-at="2019-05-02T10:52:10Z" finished-at="2019-05-02T10:53:01Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- GetData -->
-      </class> <!-- com.qa.restAssured.GETRestTest -->
+        </test-method> <!-- POSTRestApiTest -->
+      </class> <!-- com.qa.restAssured.POSTRestTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

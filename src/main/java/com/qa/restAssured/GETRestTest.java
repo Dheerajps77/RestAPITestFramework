@@ -30,7 +30,8 @@ public class GETRestTest extends TestBase {
 			requestedGETData=responseOfGETData.asString();
 			System.out.println(requestedGETData);
 			int responseCode=responseOfGETData.getStatusCode();
-			System.out.println(responseCode);									
+			System.out.println(responseCode);	
+			
 			// This method will fetch the JSONObject value in the form of (Key,Value) pair
 			ReadJSONValue.GetJSONStringValues(requestedGETData, jsonObjectName, jsonStringValueName);		
 			

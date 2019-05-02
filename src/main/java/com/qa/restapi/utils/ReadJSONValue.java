@@ -57,7 +57,7 @@ public class ReadJSONValue {
 			Object objct4;
 			while (ite.hasNext()) {				
 				objJSON2 = objJSON1.getJSONObject(jsonOjectValue);
-				String Key = (String) ite.next();
+				String Key = ite.next();
 				objct4 = objJSON2.get(Key);				
 				if (objct4 instanceof Integer) {
 					int intValue = objJSON2.getInt(Key);

@@ -19,6 +19,7 @@ public class TestBase {
 	public int HTTP_RESPONSE_CODE_203=203;
 	public String LAST_NAME="Bluth";
 	public String totalpages="4";
+	public String statusOfLine="HTTP/1.1 201 Created";
 	
 	public TestBase()
 	{
