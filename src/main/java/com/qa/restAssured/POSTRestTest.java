@@ -9,9 +9,7 @@ import org.testng.annotations.Test;
 import com.qa.restapi.base.TestBase;
 import com.qa.restapi.client.RestAssuredClient;
 
-import io.restassured.RestAssured;
 import io.restassured.response.Response;
-import io.restassured.specification.RequestSpecification;
 
 public class POSTRestTest extends TestBase{
 	
@@ -20,15 +18,17 @@ public class POSTRestTest extends TestBase{
 	@Test
 	public void POSTRestApiTest()
 	{
-		String URL=prop.getProperty("POSTRestAssuredURL");		
+		String URL;
+		int statusOfCode;
+		String statusOfLine;
 		try
 		{
 								
 			objRestAssuredClient=new RestAssuredClient();
+			URL=prop.getProperty("POSTRestAssuredURL");
 			Response objResponse=objRestAssuredClient.POSTRestAssuredTestMethod(URL);
-
-			int statusOfCode=objResponse.getStatusCode();
-			String statusOfLine=objResponse.getStatusLine();						
+			statusOfCode=objResponse.getStatusCode();
+			statusOfLine=objResponse.getStatusLine();						
 			System.out.println("Response of status code is : "+statusOfCode);
 			System.out.println("Response of status line is : "+statusOfLine);			
 			Assert.assertEquals(statusOfCode, HTTP_RESPONSE_CODE_201);
